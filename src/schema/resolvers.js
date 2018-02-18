@@ -1,9 +1,11 @@
 const books = require('../mock/mockData');
 
-const resolvers = {
+const BooksResolvers = {
 	Query: {
-		books: () => books,
+		books: async (root, data, context) => {
+			return books;
+		},
 	},
 };
 
-module.exports = resolvers;
+module.exports = BooksResolvers;

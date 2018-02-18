@@ -12,7 +12,7 @@ const jwtOptions = {
 
 passport.use(
 	new passportJwt.Strategy(jwtOptions, (payload, done) => {
-		console.log(payload);
+		console.log(payload.sub);
 		const user = getUserById(parseInt(payload.sub));
 		if (user) return done(null, user, payload);
 		return done();

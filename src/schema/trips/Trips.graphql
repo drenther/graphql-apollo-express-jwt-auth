@@ -1,0 +1,10 @@
+type Trip {
+	_id: String!
+	owner: User!
+	from: String!
+	to: String!
+}
+
+extend type Query {
+	getTrips(owner: String): [Trip]
+}

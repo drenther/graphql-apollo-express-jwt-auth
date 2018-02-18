@@ -13,4 +13,7 @@ module.exports = {
 	GOOGLE_ID: process.env.GOOGLE_ID,
 	GOOGLE_SECRET: process.env.GOOGLE_SECRET,
 	GOOGLE_CALLBACK: process.env.GOOGLE_CALLBACK,
+	MONGO_URL: process.env.MONGO_URL,
+	CALLBACK_URL: process.env.CALLBACK_URL,
+	MOCK_AUTH_TOKEN: process.env.MOCK_AUTH_TOKEN,
 };

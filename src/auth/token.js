@@ -8,14 +8,15 @@ const {
 	TOKEN_EXPIRY,
 } = require('../config');
 
-const generateAccessToken = userId =>
-	jwt.sign({}, TOKEN_SECRET, {
+const generateAccessToken = userId => {
+	return jwt.sign({}, TOKEN_SECRET, {
 		expiresIn: TOKEN_EXPIRY,
 		audience: TOKEN_AUDIENCE,
 		issuer: TOKEN_ISSUER,
 		subject: userId.toString(),
 		keyid: uuidv4(),
 	});
+};
 
 module.exports = {
 	generateAccessToken,
